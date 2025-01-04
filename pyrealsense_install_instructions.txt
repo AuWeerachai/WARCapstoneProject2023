@@ -1,0 +1,54 @@
+1. install pip, setuptools, and wheel (this step may be optional, but it doesn't hurt anything to do it)py
+https://packaging.python.org/en/latest/guides/installing-using-linux-tools/
+sudo apt update
+sudo apt install python3-venv python3-pip
+
+2. Install python 3.9 and create a virtual environment
+(Instructions based on the second answer to this question on StackExchange, except adding the deadsnakes )
+
+2.a Add the deadsnakes repo
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+
+2.b. Install Python 3.9 :)
+sudo apt-get install python3.9-dev python3.9-venv
+
+2.c. Find out where your python 3.9 is located by this command:
+which python3.9
+(Should be something like /usr/bin/python3.9)
+
+2.d. Create Virtual Environment in the Home directory.
+cd
+mkdir virtual_env
+/usr/bin/python3.9 -m venv ~/virtual_env/venv_with_python3.9
+source ~/virtual_env/venv_with_python3.9/bin/activate
+
+2.e Verify that you're using python 3.9
+python --version
+(should see Python 3.9.xx)
+
+3. Update pip, setuptools, and wheel
+python3 -m pip install --upgrade pip setuptools wheel
+
+
+4. Install pyrealsense2
+python3 -m pip install pyrealsense2
+
+
+
+5.  If you want to switch back to python 3.10 version for any reason
+deactivate
+
+6. To switch back to the python 3.9 venv
+source ~/virtual_env/venv_with_python3.9/bin/activate
+
+
+##################################################################
+
+MATLAB
+
+after downloading and unzipping the folder, run the installer
+
+after installation, run 'sudo apt install matlab-support' and 
+provide the path to the folder you installed to
+(should be something like '/home/usmarobot/MATLAB/R2022b')
